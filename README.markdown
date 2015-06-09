@@ -1,5 +1,5 @@
 # About this fork
-This fork is on a mission; to liberate taskopen from the arbitrary constraint of acting _only_ on link-type annotations. The original script has powerful features that could do amazing things for taskwarrior users *if* this limitation were removed. Unfortunately, the original author (the very talented ValiValpas) dug in his heels, and stopped short of making the power of taskopen available for non-link-type annotations.
+This fork is on a mission; to liberate taskopen from the arbitrary constraint of acting _only_ on link-type annotations. The original script has many powerful features (see the excellent man pages) that could do amazing things for taskwarrior users *if* this limitation were removed. Unfortunately, the original author (the very talented ValiValpas) dug in his heels, and stopped short of making the power of taskopen available for non-link-type annotations.
 
 In other words, taskopen can act on this annotation;
 <pre>
