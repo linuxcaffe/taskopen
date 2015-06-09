@@ -10,7 +10,7 @@ but is totally blind to this annotation;
 thing: this is a non-link type annotation
 </pre>
 
-I believe this limitation is arbitrary, unnecessary, and blocks 80% of the potential uses of this program. If you are a taskwarrior-using perl-programmer, please have a look at his issue (https://github.com/ValiValpas/taskopen/issues/24) and help me fix it.
+I believe this limitation is arbitrary, unnecessary, and blocks 80% of the potential uses of this program. If you are a taskwarrior-using perl-programmer, please have a look at his issue (https://github.com/ValiValpas/taskopen/issues/24) and help me fix it.. becaus I couldn't perl my way out of a paper bag!
 
 thanks!
 
