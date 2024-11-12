@@ -1,3 +1,19 @@
+About this fork
+This fork is on a mission; to liberate taskopen from the arbitrary constraint of acting _only_ on link-type annotations. The original script has many powerful features (see the excellent man pages) that could do amazing things for taskwarrior users *if* this limitation were removed. Unfortunately, the original author (the very talented ValiValpas) dug in his heels, and stopped short of making the power of taskopen available for non-link-type annotations.
+
+In other words, taskopen can act on this annotation;
+<pre>
+thing: ~/path/to/thing.txt
+</pre>
+but is totally blind to this annotation;
+<pre>
+thing: this is a non-link type annotation
+</pre>
+
+I believe this limitation is arbitrary, unnecessary, and blocks 80% of the potential uses of this program. If you are a taskwarrior-using perl-programmer, please have a look at his issue (https://github.com/ValiValpas/taskopen/issues/24) and help me fix it.. becaus I couldn't perl my way out of a paper bag!
+
+----
+
 Taskopen was original developed as a simple wrapper script for taskwarrior that enables interaction with annotations (e.g. open, edit, execute files).
 The current version is a pretty powerful customisable tool that supports a variety of use cases.
 This README serves as a basic getting-started guide including install instructions and examples.
