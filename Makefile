@@ -56,3 +56,40 @@ clean:
 	rm taskopen
 
 .PHONY: install clean release
+# ---------------------------
+# Packaging (local .deb build)
+# ---------------------------
+
+PKGNAME   := taskopen
+VERSION   := 1.0.2
+ITERATION := 1
+ARCH      := amd64
+PREFIX    ?= /usr
+DESTDIR   ?=
+
+.PHONY: deb clean-deb
+
+deb: clean taskopen
+	@echo "==> staging install into ./pkgroot"
+	rm -rf pkgroot
+	mkdir -p pkgroot
+	$(MAKE) PREFIX=$(PREFIX) DESTDIR=$$(pwd)/pkgroot install
+
+	@echo "==> building .deb with fpm"
+	fpm -s dir -t deb \
+		-n $(PKGNAME) \
+		-v $(VERSION) \
+		--iteration $(ITERATION) \
+		-a $(ARCH) \
+		--license MIT \
+		--maintainer "djp" \
+		--description "taskwarrior task opener helper (fork of taskopen)" \
+		-C pkgroot \
+		.
+
+	@echo "==> done"
+	@ls -al *.deb
+
+clean-deb:
+	rm -rf pkgroot *.deb
+
